@@ -22,6 +22,7 @@ module.exports.createNewListing = async (req, res) => {
     let url = req.file.path;
     let filename = req.file.filename;
     req.body.owner = req.user._id;
+    req.body.country = capitalizeWords(req.body.country)
     req.body.image = { url, filename }
     let newListing = new Listing(req.body)
     await newListing.save();
