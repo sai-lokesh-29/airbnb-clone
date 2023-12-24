@@ -1,0 +1,25 @@
+/** @format */
+
+img {
+  height: 280px !important;
+  border-radius: 5px;
+}
+
+.card {
+  margin-bottom: 10px;
+  height: 400px;
+  line-height: 15px;
+  border: 0;
+}
+
+.card-body {
+  padding: 5px;
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.5;
+  background-color: white;
+}

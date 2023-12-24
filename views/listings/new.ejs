@@ -1,0 +1,67 @@
+<% layout('./layout/boilerplate') -%>
+
+  <head>
+    <title>Create new listining</title>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h1>Create a New Listing</h1><br>
+        <form action="/listings/create" method="post" novalidate enctype="multipart/form-data" class="needs-validation">
+          <div>
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="villa" required>
+            <div class="invalid-feedback">
+              Please choose a title.
+            </div>
+          </div>
+          <br>
+          <div>
+            <label for="description" class="form-label">Description:</label>
+            <textarea id="description" name="description" class="form-control" placeholder="sweat place"
+              required></textarea>
+            <div class="invalid-feedback">
+              Please choose a description.
+            </div>
+          </div>
+          <br>
+          <div>
+            <label for="image" class="form-label">upload listing image::</label>
+            <input type="file" id="image" class="form-control" name="image" required>
+            <div class="invalid-feedback">
+              Please upload a image.
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="price" class="form-label">Price:</label>
+              <input type="number" id="price" class="form-control" placeholder="5000" name="price" required>
+              <div class="invalid-feedback">
+                Please choose a price.
+              </div>
+            </div>
+            <div class="col-md-8">
+              <label for="country" class="form-label">Country:</label>
+              <input type="text" id="country" class="form-control" placeholder="India" name="country" required>
+              <div class="invalid-feedback">
+                Please choose a country.
+              </div>
+            </div>
+          </div>
+          <br>
+          <div>
+            <label for="location" class="form-label">Location:</label>
+            <input type="text" id="location" class="form-control" placeholder="Goa" name="location" required>
+            <div class="invalid-feedback">
+              Please choose a location.
+            </div>
+          </div>
+          <br>
+          <input type="submit" class="btn btn-dark" value="Create">
+        </form>
+      </div>
+    </div>
+    <br>
+  </body>
